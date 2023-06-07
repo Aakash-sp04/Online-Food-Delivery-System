@@ -1,9 +1,10 @@
+require('dotenv').config(); //At the top only to write
 const express = require('express')
 const app = express()
 const port = 5000   //as react port is already 3000
 const mongoDB = require("./db")
 const bodyparser = require('body-parser') //For Payment Gateway
-const stripe = require('stripe')("sk_test_51Mhu33SJ1eKemPlyeLE7g0YTVuA65o6MQPM5gLN6uSK3NwHROaoJZlreHWMmRGGMhurD8M4P6uqgioyzSBsC3WV200ccFn30YF")  //For Payment Gateway
+const stripe = require('stripe')(process.env.REACT_APP_STRIPE_K)  //For Payment Gateway
 const uuid = require('uuid').v4
 const cors = require('cors')
 
