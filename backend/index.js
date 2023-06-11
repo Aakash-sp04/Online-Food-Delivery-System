@@ -38,8 +38,7 @@ app.use('/api', require("./Routes/DisplayData"))
 app.use('/api', require("./Routes/OrderData"))
 
 app.get('/', (req, res) => {
-  res.send(global.food_items)
-  res.send(global.foodCategory)
+  res.send('Hello World!')
 })
 
 //For Payment Gateway
