@@ -72,9 +72,9 @@ export default function Signup() {
             </div>
             <div className='container'>
                 <form onSubmit={handleSubmit}>
-                    <div className=' col d-flex justify-content-center m-4'>
+                    <div className='row d-flex justify-content-center my-4'>
                         <div className="card p-1 w-50 bg-success">
-                            <div className="card p-4 w-100">
+                            <div className="card p-3 w-60">
                                 <div className="mb-3">
                                     <label htmlFor="name" className="form-label">Name</label>
                                     <input type="text" className="form-control" name="name" placeholder='Name should contain atleast 3 characters' value={credentials.name} onChange={onChange} />
@@ -94,21 +94,19 @@ export default function Signup() {
                                     </fieldset>
 
                                     <div className="mt-3">
-                                        <button type="button" onClick={handleClick} name="geolocation" className="text-white btn btn-success">Track Current Location <img src={location} alt='' /></button>
+                                        <button type="button" onClick={handleClick} name="geolocation" className="text-white btn btn-success">Your location<img src={location} alt='' /></button>
                                     </div>
                                 </div>
 
                                 {/*For buttons*/}
-                                <table align='center'>
-                                    <tr>
-                                        <td>
-                                            <button type="submit" className="my-2 btn btn-success text-white">Submit</button>
-                                        </td>
-                                        <td>
-                                            <Link to="/login" className='mx-3 btn btn-danger'>Already a User</Link>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <div className='row'>
+                                    <div className='col mt-2 d-flex justify-content-center'>
+                                        <button type="submit" className="btn btn-success text-white">Submit</button>
+                                    </div>
+                                    <div className='col mt-2 d-flex justify-content-center'>
+                                        <Link to="/login" className='btn btn-danger'>Already a user</Link>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
